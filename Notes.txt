@@ -1,0 +1,2 @@
+Aim : Providing users an application through which they can participate in the auction process from any where.
+Modules : Registration, Login, Sell, Search, Bid

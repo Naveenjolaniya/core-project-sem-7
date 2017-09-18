@@ -1,0 +1,39 @@
+Requirements 
+
+jdk1.4
+Weblogic 7.0
+Oracle 8I
+
+
+
+Step1->Login as system/manager and create a user and tables in oracle using queries in Tables\Tables.sql in Tables folder
+
+Step2->create SYSTEM DSN for application as auction
+
+Step3->create a domain in web logic server
+
+Step4->start the server
+
+Step5->open server console
+
+Step6->create a connection pool with name demoPool and with the following properties
+Name->demoPool
+URL->jdbc:odbc:auction
+Driver Classname->sun.jdbc.odbc.JdbcOdbcDriver
+Properties->user = auction
+	    password = auction
+
+Step7->Put it in the server
+
+Step8->create a datasource with name auctionDataSource and with the following properties
+Name->auctionDataSource
+JNDI Name->auctionDataSource
+Pool Name->demoPool
+
+Step9->Put it in the server
+
+Step10->Copy ESaleE.ear file in the Deploy\Ear directory into the applications folder of the server
+
+Step11->Copy files in DefaultWebApp folder into the domain's DefaultWebApp folder
+
+Step12->Go to the explorer and give the address "http://localhost:7001/home.htm"
